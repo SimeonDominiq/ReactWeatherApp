@@ -1,0 +1,137 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+.main_container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr) [3];
+  grid-template-columns: repeat(3, 1fr);
+  -ms-grid-rows: (1fr) [auto-fill];
+  grid-template-rows: repeat(auto-fill, 1fr);
+  align-items: center;
+  justify-items: center;
+  height: 100%;
+}
+
+header {
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 0.25fr;
+  grid-template-columns: 1fr 1fr 0.25fr;
+  -ms-grid-rows: 1fr;
+  grid-template-rows: 1fr;
+  box-shadow: 0 0 2rem rgba(0, 0, 255, 0.1);
+  padding: 5px 0px;
+  margin: 0;
+  align-items: center;
+  transition: background-color 0.5s linear;
+  -webkit-animation: 1s ease-in-out fadein;
+  animation: 1s ease-in-out fadein;
+}
+
+.header_left_section {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 1fr;
+  grid-template-rows: 1fr;
+  -ms-grid-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+}
+.header_date_text {
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  display: inline;
+  margin: 0.5rem 0;
+}
+
+.weather_card {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+  grid-template-columns: 1fr;
+  -ms-grid-rows: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  box-shadow: 0 0 2rem rgba(0, 0, 255, 0.1);
+  justify-items: center;
+  padding: 2rem;
+  margin: 2rem;
+  width: 19rem;
+  height: 30rem;
+  cursor: pointer;
+  background-color: #fff;
+  border-radius: 1.75rem;
+  -webkit-animation: 1.25s ease-in-out fadein;
+  animation: 1.25s ease-in-out fadein;
+}
+.city_name_text {
+  text-transform: uppercase;
+  font-size: 1.4rem;
+  letter-spacing: 0.1rem;
+  margin-bottom: 1rem;
+}
+.weather_icon_container {
+  width: 10rem;
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: center;
+}
+.temperature_text {
+  align-self: end;
+  width: 100%;
+  font-size: 4rem;
+  font-weight: 100;
+  letter-spacing: 0.1rem;
+}
+.temperature_metric_text {
+  text-align: start;
+  font-size: 3rem;
+}
+.temp_weather_condition {
+  display: block;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  text-align: center;
+}
+.temp_min_max_container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 1fr;
+  grid-template-rows: 1fr;
+  -ms-grid-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+}
+.min_container,
+.max_container {
+  margin: 1rem 3rem;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+  grid-template-columns: 1fr;
+  -ms-grid-rows: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+.min_container img,
+.max_container img {
+  height: 1.25rem;
+  margin: auto;
+}
+.min_temp_text,
+.max_temp_text {
+  text-align: center;
+  font-size: 2rem;
+}
+.min_text,
+.max_text {
+  font-size: 1rem;
+  text-align: center;
+}
+.min_text {
+  color: #00ff9b;
+}
+.max_text {
+  color: #ff0070;
+}
