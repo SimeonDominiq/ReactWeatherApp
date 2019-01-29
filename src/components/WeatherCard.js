@@ -10,6 +10,8 @@ class WeatherCard extends Component {
     };
   }
 
+  componentDidMount() {}
+
   render() {
     const WeatherComponent = this.state.weatherData.map(data => {
       return <WeatherView key={data.id} weatherdata={data} />;
