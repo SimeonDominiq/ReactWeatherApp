@@ -3,9 +3,9 @@ import Geocode from "react-geocode";
 import WeatherView from "./WeatherView";
 import LoaderView from "./LoaderView";
 
-Geocode.setApiKey("AIzaSyCiQfLLZ4aMczLNuHXYx8jtjyYAY64Fqvw");
+Geocode.setApiKey(process.env.GOOGLE_API_KEY);
 
-const API_KEY = "002f17551d6392a291cf51f08dd2b853",
+const API_KEY = process.env.FORECAST_API,
   RESULT_LIMIT = 5,
   RESULT_UNIT = "metric";
 
@@ -98,7 +98,6 @@ class WeatherDetails extends Component {
   };
 
   render() {
-    console.log(this.state.cur_state);
     return this.state.isLoading ? (
       <LoaderView />
     ) : (
